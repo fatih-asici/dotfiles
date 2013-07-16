@@ -1,0 +1,17 @@
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	di = diff
+	st = status
+[color]
+	ui = auto
+[merge]
+	tool = vimdiff
+[push]
+	default = tracking
+[svn]
+	rmdir = true
+[user]
+	email = fatih.asici@gmail.com
+	name = Fatih Aşıcı
