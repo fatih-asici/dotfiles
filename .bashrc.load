@@ -7,8 +7,6 @@ export PATH=$PATH:$HOME/bin
 ####
 # put any bash customizations in here
 
-export EDITOR=vim
-
 # skip it all if non-interactive
 [ -z "$PS1" ] && return
 
@@ -16,3 +14,9 @@ export EDITOR=vim
 
 alias ll='ls -l'
 alias la='ls -Al'
+
+export EDITOR=vim
+
+DEBEMAIL="fatih.asici@gmail.com"
+DEBFULLNAME="Fatih Aşıcı"
+export DEBEMAIL DEBFULLNAME
