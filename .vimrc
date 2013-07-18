@@ -94,9 +94,3 @@ set colorcolumn=80
 " Show TAB characters
 set list!
 set listchars=tab:>-
-
-"source /etc/vim/kde-devel-vim.vim
-
-" kde-devel-vim plugin adds some paths to search headers in. Some projects
-" include paths relative to the src/ in the project top directory.
-"set path+=src,
