@@ -12,5 +12,7 @@ export EDITOR=vim
 # skip it all if non-interactive
 [ -z "$PS1" ] && return
 
+. $HOME/.bashrc.d/z/z.sh
+
 alias ll='ls -l'
 alias la='ls -Al'
