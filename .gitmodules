@@ -7,3 +7,6 @@
 [submodule ".bashrc.d/z"]
 	path = .bashrc.d/z
 	url = https://github.com/rupa/z.git
+[submodule ".vim/bundle/YankRing"]
+	path = .vim/bundle/YankRing
+	url = https://github.com/vim-scripts/YankRing.vim.git
