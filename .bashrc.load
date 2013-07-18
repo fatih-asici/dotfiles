@@ -7,7 +7,10 @@ export PATH=$PATH:$HOME/bin
 ####
 # put any bash customizations in here
 
+export EDITOR=vim
+
+# skip it all if non-interactive
+[ -z "$PS1" ] && return
+
 alias ll='ls -l'
 alias la='ls -Al'
-
-export EDITOR=vim
