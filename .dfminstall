@@ -1,4 +1,5 @@
 .gitmodules skip
 README.md skip
+bin recurse
 prepare-bashrc.sh exec
 prepare-bashrc.sh skip
