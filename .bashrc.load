@@ -12,6 +12,11 @@ export PATH=$PATH:$HOME/bin
 
 . $HOME/.bashrc.d/z/z.sh
 
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
 alias cd..="cd .."
 alias ll='ls -l'
 alias la='ls -Al'
