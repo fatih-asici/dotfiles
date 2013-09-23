@@ -10,6 +10,11 @@
 	tool = vimdiff
 [push]
 	default = tracking
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = fatih.asici@gmail.com
+	smtpserverport = 587
 [svn]
 	rmdir = true
 [user]
