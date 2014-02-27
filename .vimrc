@@ -94,3 +94,6 @@ set colorcolumn=80
 " Show TAB characters
 set list!
 set listchars=tab:>-
+
+" YankRing history file path
+let g:yankring_history_dir = '~/.vim'
