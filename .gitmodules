@@ -1,18 +1,18 @@
-[submodule ".vim/bundle/pathogen"]
-	path = .vim/bundle/pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/taglist"]
-	path = .vim/bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule ".bashrc.d/z"]
 	path = .bashrc.d/z
 	url = https://github.com/rupa/z.git
-[submodule ".vim/bundle/YankRing"]
-	path = .vim/bundle/YankRing
-	url = https://github.com/vim-scripts/YankRing.vim.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule ".vim/bundle/emacsmodeline"]
 	path = .vim/bundle/emacsmodeline
 	url = https://github.com/sfiera/vim-emacsmodeline.git
+[submodule ".vim/bundle/pathogen"]
+	path = .vim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/taglist"]
+	path = .vim/bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule ".vim/bundle/YankRing"]
+	path = .vim/bundle/YankRing
+	url = https://github.com/vim-scripts/YankRing.vim.git
