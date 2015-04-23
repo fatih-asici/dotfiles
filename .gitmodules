@@ -1,6 +1,9 @@
 [submodule ".bashrc.d/z"]
 	path = .bashrc.d/z
 	url = https://github.com/rupa/z.git
+[submodule ".vim/bundle/editorconfig"]
+	path = .vim/bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule ".vim/bundle/emacsmodeline"]
 	path = .vim/bundle/emacsmodeline
 	url = https://github.com/sfiera/vim-emacsmodeline.git
