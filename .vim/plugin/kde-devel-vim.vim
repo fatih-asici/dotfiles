@@ -126,17 +126,6 @@ function! SetCodingStyle()
         set ts=4
         set noet
         set tw=100
-    elseif pathfn =~ 'kdepim'
-        if strlen(mapcheck('(','i')) > 0
-            iunmap (
-        endif
-        call SmartParensOn()
-        let g:need_brace_on_next_line = '\<\(class\|namespace\|struct\)\>'
-        let g:need_brace_on_same_line = '\<\(if\|else\|while\|switch\|do\|foreach\|forever\|enum\|for\|try\|catch\)\>'
-        set sw=2
-        set sts=2
-        set et
-        set tw=100
     elseif pathfn =~ 'xine-lib'
         call SmartParensOff()
         let g:need_brace_on_next_line = '\<\(class\|namespace\|struct\)\>'
@@ -145,7 +134,7 @@ function! SetCodingStyle()
         set sts=2
         set ts=8
         set noet
-        set tw=100
+        "set tw=100
     elseif pathfn =~ 'kdemultimedia\/juk'
         call SmartParensOff()
         let g:need_brace_on_next_line = '\<\(class\|namespace\|struct\|if\|else\|while\|switch\|do\|foreach\|forever\|enum\|for\|try\|catch\)\>'
@@ -153,7 +142,7 @@ function! SetCodingStyle()
         set sw=4
         set sts=4
         set et
-        set tw=100
+        "set tw=100
     elseif pathfn =~ 'kdenetwork\/kopete'
         call SmartParensOff()
         let g:need_brace_on_next_line = '\<\(class\|namespace\|struct\|if\|else\|while\|switch\|do\|foreach\|forever\|enum\|for\|try\|catch\)\>'
@@ -161,8 +150,8 @@ function! SetCodingStyle()
         set sw=4
         set sts=4
         set noet
-        set tw=100
-    else "if pathfn =~ '\(kdelibs\|qt-copy\)'
+        "set tw=100
+    else   " kdelibs/kf5/qt coding style
         call SmartParensOff()
         inoremap ( <C-R>=SpaceBetweenKeywordAndParens()<CR>
         let g:need_brace_on_next_line = '\<\(class\|namespace\|struct\)\>'
@@ -170,7 +159,7 @@ function! SetCodingStyle()
         set sw=4
         set sts=4
         set et
-        set tw=100
+        "set tw=100
     endif
     if ( !exists("g:noautobrace") )
         call EnableSmartLineBreak()
@@ -497,7 +486,7 @@ function! SwitchHeaderImpl()
         execute( "set sw=4" )
         execute( "set sts=4" )
         execute( "set et" )
-        execute( "set tw=100" )
+        "execute( "set tw=100" )
     elseif fn =~ impl
         call AskToSave()
         let file = substitute( fn, impl, '.h', '' )
@@ -792,10 +781,6 @@ function! MapIdentHeader( ident )
           \a:ident == 'IconSize'
         return '<kiconloader.h>'
 
-    " aRts stuff
-    elseif a:ident =~ '\arts_\(debug\|info\|warning\|fatal\)'
-        return '<debug.h>'
-
     " Standard Library stuff
     elseif a:ident =~ '\(std::\)\?\(cout\|cerr\|endl\)'
         return '<iostream>'
@@ -1004,8 +989,7 @@ function! AddQtSyntax()
         syn keyword qtMacros       Q_OBJECT Q_WIDGET Q_PROPERTY Q_ENUMS Q_OVERRIDE Q_CLASSINFO Q_SETS SIGNAL SLOT Q_DECLARE_PUBLIC Q_DECLARE_PRIVATE Q_D Q_Q Q_DISABLE_COPY Q_DECLARE_METATYPE Q_PRIVATE_SLOT Q_FLAGS Q_INTERFACES Q_DECLARE_INTERFACE Q_EXPORT_PLUGIN2 Q_GADGET Q_SCRIPTABLE Q_INVOKABLE METHOD Q_ARG Q_RETURN_ARG Q_GLOBAL_STATIC Q_GLOBAL_STATIC_WITH_ARGS
         syn keyword qtCast         qt_cast qobject_cast qvariant_cast qstyleoption_cast qgraphicsitem_cast
         syn keyword qtTypedef      uchar uint ushort ulong Q_INT8 Q_UINT8 Q_INT16 Q_UINT16 Q_INT32 Q_UINT32 Q_LONG Q_ULONG Q_INT64 Q_UINT64 Q_LLONG Q_ULLONG pchar puchar pcchar qint8 quint8 qint16 quint16 qint32 quint32 qint64 quint64 qlonglong qulonglong qreal
-        syn keyword kdeKeywords    k_dcop k_dcop_signals
-        syn keyword kdeMacros      K_DCOP ASYNC PHONON_ABSTRACTBASE PHONON_OBJECT PHONON_HEIR PHONON_ABSTRACTBASE_IMPL PHONON_OBJECT_IMPL PHONON_HEIR_IMPL PHONON_PRIVATECLASS PHONON_PRIVATEABSTRACTCLASS K_DECLARE_PRIVATE K_D K_EXPORT_PLUGIN K_PLUGIN_FACTORY K_PLUGIN_FACTORY_DEFINITION K_PLUGIN_FACTORY_DECLARATION K_GLOBAL_STATIC K_GLOBAL_STATIC_WITH_ARGS
+        syn keyword kdeMacros      ASYNC PHONON_ABSTRACTBASE PHONON_OBJECT PHONON_HEIR PHONON_ABSTRACTBASE_IMPL PHONON_OBJECT_IMPL PHONON_HEIR_IMPL PHONON_PRIVATECLASS PHONON_PRIVATEABSTRACTCLASS K_DECLARE_PRIVATE K_D K_EXPORT_PLUGIN K_PLUGIN_FACTORY K_PLUGIN_FACTORY_DEFINITION K_PLUGIN_FACTORY_DECLARATION K_GLOBAL_STATIC K_GLOBAL_STATIC_WITH_ARGS
         syn keyword cRepeat        foreach
         syn keyword cRepeat        forever
 
@@ -1013,7 +997,6 @@ function! AddQtSyntax()
         hi def link qtMacros            Type
         hi def link qtCast              Statement
         hi def link qtTypedef           Type
-        hi def link kdeKeywords         Statement
         hi def link kdeMacros           Type
     endif
 endfunction
