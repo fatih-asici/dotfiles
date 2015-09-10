@@ -28,3 +28,5 @@ export EDITOR=vim
 DEBEMAIL="fatih.asici@gmail.com"
 DEBFULLNAME="Fatih Aşıcı"
 export DEBEMAIL DEBFULLNAME
+
+export MINICOM="-c on"
