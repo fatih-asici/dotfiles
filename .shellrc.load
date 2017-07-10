@@ -11,6 +11,9 @@ export PATH=$PATH:$HOME/bin
 # skip it all if non-interactive
 [ -z "$PS1" ] && return
 
+# setup powerline
+. /usr/share/powerline/bindings/bash/powerline.sh
+
 . $HOME/.bashrc.d/z/z.sh
 
 alias ls='ls --color=auto'
