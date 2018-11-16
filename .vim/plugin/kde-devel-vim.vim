@@ -43,7 +43,7 @@ endif
 set path+=,
 
 " Use makeobj to build
-set mp=makeobj
+"set mp=makeobj
 
 " If TagList is Loaded then get a funny statusline
 " Only works if kde-devel-vim.vim is loaded after taglist.
