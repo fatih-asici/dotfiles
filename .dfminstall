@@ -4,3 +4,4 @@ README.md skip
 bin recurse
 prepare-bashrc.sh exec
 prepare-bashrc.sh skip
+v skip
